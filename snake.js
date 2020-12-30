@@ -14,13 +14,13 @@ let snake = [
     {x: 160, y: 200}
 ];
 
-main();
-
 function main()
 {
     clearCanvas();
     drawSnake();
 }
+
+main();
 
 function clearCanvas()
 {
