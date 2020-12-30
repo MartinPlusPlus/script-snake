@@ -1,0 +1,17 @@
+div#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+canvas#gameCanvas {
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+
+    margin: 5%;
+}
