@@ -14,14 +14,23 @@ let snake = [
     {x: 160, y: 200}
 ];
 
+// Set velocities
+let dx = 10;
+let dy = 0;
+
 function main()
 {
-    clearCanvas();
-    drawSnake();
+    setTimeout(function onTick() {
+        clearCanvas();
+        move_snake();
+        drawSnake();
+        main();
+    }, 100);
 }
 
 main();
 
+// Fills the canvas in with white
 function clearCanvas()
 {
     snakeboard_ctx.fillStyle = board_background;
@@ -30,6 +39,7 @@ function clearCanvas()
     snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
 }
 
+// Draws the snake part given the position
 function drawSnakePart(snakePart)
 {
     snakeboard_ctx.fillStyle = "lightblue";
@@ -38,8 +48,16 @@ function drawSnakePart(snakePart)
     snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
 }
 
-// Prints parts
+// Draws the snake
 function drawSnake(snakePart)
 {
     snake.forEach(drawSnakePart);
+}
+
+
+function move_snake()
+{
+    const head = {x: snake[0].x + dx, y: snake[0].y};
+    snake.unshift(head);
+    snake.pop();
 }
