@@ -1,5 +1,5 @@
 const snakeboard = document.getElementById("gameCanvas");
-const snakeboard_ctx = gameCanvas.getContext("2d");
+const snakeboard_ctx = snakeboard.getContext("2d");
 
 const board_border = 'black';
 const board_background = "white";
@@ -14,6 +14,22 @@ let snake = [
     {x: 160, y: 200}
 ];
 
+main();
+
+function main()
+{
+    clearCanvas();
+    drawSnake();
+}
+
+function clearCanvas()
+{
+    snakeboard_ctx.fillStyle = board_background;
+    snakeboard_ctx.strokeStyle = board_border;
+    snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
+    snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
+}
+
 function drawSnakePart(snakePart)
 {
     snakeboard_ctx.fillStyle = "lightblue";
@@ -25,5 +41,5 @@ function drawSnakePart(snakePart)
 // Prints parts
 function drawSnake(snakePart)
 {
-    snake.foreach(drawSnakePart);
+    snake.forEach(drawSnakePart);
 }
