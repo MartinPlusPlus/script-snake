@@ -1,7 +1,7 @@
-const board_border = 'black';
+const board_border = "black";
 const board_background = "white";
-const snake_col = 'lightblue';
-const snake_border = 'darkblue';
+const snake_col = "lightblue";
+const snake_border = "darkblue";
 
 let snake = [
     {x: 200, y: 200},
@@ -38,7 +38,11 @@ document.addEventListener("keydown", change_direction);
 function main()
 {
 
-    if (has_game_ended()) return;
+    if (has_game_ended())
+    {
+        gameOver();
+        return;
+    }
 
     changing_direction = false;
     setTimeout(function onTick()
@@ -188,4 +192,18 @@ function move_snake()
         snake.pop();
     }
 
+}
+
+function gameOver()
+{
+    clear_board();
+
+    snakeboard_ctx.fillStyle = "darkgreen";
+    snakeboard_ctx.strokestyle = "black";
+    snakeboard_ctx.font = "bold 60px Arial";
+    snakeboard_ctx.textBaseline = "middle";
+    snakeboard_ctx.textAlign = "center";
+
+    snakeboard_ctx.fillText("Game Over...", snakeboard.width/2, snakeboard.height/2);
+    snakeboard_ctx.strokeText("Game Over...", snakeboard.width/2, snakeboard.height/2);
 }

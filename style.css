@@ -4,12 +4,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+    font-size: 60px;
+}
+
 h3 {
     font-size: 30px;
 }
 
-#score {
-    font-size: 14px;
+.subtitle {
+    font-size: 2em;
 }
 
 div#game {
