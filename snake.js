@@ -198,12 +198,13 @@ function gameOver()
 {
     clear_board();
 
-    snakeboard_ctx.fillStyle = "darkgreen";
+    snakeboard_ctx.fillStyle = "black";
     snakeboard_ctx.strokestyle = "black";
     snakeboard_ctx.font = "bold 60px Arial";
     snakeboard_ctx.textBaseline = "middle";
     snakeboard_ctx.textAlign = "center";
 
     snakeboard_ctx.fillText("Game Over...", snakeboard.width/2, snakeboard.height/2);
-    snakeboard_ctx.strokeText("Game Over...", snakeboard.width/2, snakeboard.height/2);
+    // Uncomment if you want to add a stroke to the text
+    //snakeboard_ctx.strokeText("Game Over...", snakeboard.width/2, snakeboard.height/2);
 }
