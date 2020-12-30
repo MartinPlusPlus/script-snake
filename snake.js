@@ -51,10 +51,29 @@ function main()
         draw_food();
         move_snake();
         drawSnake();
+        document.getElementById('score').innerHTML = score;
 
         // Repeat
         main();
     }, 100);
+}
+
+function restart()
+{
+    snake = [
+        {x: 200, y: 200},
+        {x: 190, y: 200},
+        {x: 180, y: 200},
+        {x: 170, y: 200},
+        {x: 160, y: 200}
+    ];
+
+    score = 0;
+    changing_direction = false;
+    dx = 10;
+    dy = 0;
+
+    main();
 }
 
 // draw a border around the canvas
@@ -183,7 +202,7 @@ function move_snake()
     if (has_eaten_food)
     {
         score += 10;
-        document.getElementById('score').innerHTML = score;
+        //document.getElementById('score').innerHTML = score;
 
         gen_food();
     }
