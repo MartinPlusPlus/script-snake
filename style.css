@@ -12,6 +12,17 @@ h3 {
     font-size: 30px;
 }
 
+button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
 .subtitle {
     font-size: 2em;
 }
