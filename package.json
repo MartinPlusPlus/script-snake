@@ -1,0 +1,23 @@
+{
+  "name": "script-snake",
+  "version": "1.0.0",
+  "description": "Snake re-created using javascript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinPlusPlus/script-snake.git"
+  },
+  "author": "Martin Eldredge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MartinPlusPlus/script-snake/issues"
+  },
+  "homepage": "https://github.com/MartinPlusPlus/script-snake#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "npm": "^7.8.0"
+  }
+}
